@@ -14,13 +14,14 @@
       document.documentElement.setAttribute('data-theme', saved || 'dark');
     })();
   </script>
+  <link rel="stylesheet" href="icons.css">
 </head>
 <body class="site-subpage subpage--pricing">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container">
       <a class="brand wolf-brand" href="index.html" aria-label="Wolf Spider Web Design — Home"><img class="wolf-logo-mark" src="assets/wolf-spider-avatar.webp" alt="" width="40" height="40" decoding="async"><span class="wolf-wordmark">Wolf Spider <span class="wolf-pipe" aria-hidden="true">|</span> <span class="wolf-descriptor">Web Design</span></span></a>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false"><svg class="ws-icon ws-icon--menu" data-icon="menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="ws-icon ws-icon--close" data-icon="close" hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
       <nav class="nav" id="primary-navigation" aria-label="Main navigation">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="services.html">Services</a>
@@ -28,7 +29,7 @@
         <a class="nav-link active" href="pricing.html" aria-current="page">Pricing</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="contact.html">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme"><svg class="ws-icon ws-icon--sun" data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="ws-icon ws-icon--moon" data-icon="moon" hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 13.1A9 9 0 0 1 10.9 3.2a9 9 0 1 0 9.9 9.9Z"/></svg></button>
         <a class="btn btn-primary" href="contact.html">Get a quote</a>
       </nav>
     </div>
@@ -44,7 +45,7 @@
         <aside class="page-hero__aside" aria-label="Page introduction">
           <span class="page-hero__aside-line" aria-hidden="true"></span>
           <strong>START WITH A CONVERSATION</strong>
-          <p>Every business is different. I'll confirm scope and details before work begins.</p>
+          <p>Every business is different. I’ll confirm scope and details before work begins.</p>
         </aside>
       </div>
     </section>
@@ -60,15 +61,17 @@
             <p class="pricing-package__subline">+ $25/mo Hosting</p>
             <h4 class="pricing-package__list-label">PLAN FEATURES &amp; EXTRAS</h4>
             <ul class="pricing-package__features">
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Design And Development</li>
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Up To Five Website Pages</li>
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Additional fee: </span>$100 Fee Per Page After 5</li>
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>+$50/mo Unlimited Edits Add-on</li>
-                <li class="package-feature package-feature--excluded"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Excluded: </span>Support</li>
-                <li class="package-feature package-feature--excluded"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Excluded: </span>Lifetime Edits</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Custom design and development</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Up to five website pages</li>
+                <li class="package-feature package-feature--excluded"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Additional fee: </span>$100 fee Per Page After 5</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Mobile-friendly layouts</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Contact form and click-to-call</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Search-friendly foundations</li>
+                <li class="package-feature package-feature--excluded"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Additional fee: </span>$25/mo Hosting</li>
+                <li class="package-feature package-feature--excluded"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Optional add-on: </span>+$50/mo Unlimited Edits Add-on</li>
             </ul>
             <p class="pricing-package__note">You own the completed website after final payment. Hosting is $25/month; unlimited edits are an optional $50/month add-on. Extra pages cost $100 each after the first five.</p>
-            <a href="contact.html" class="btn btn-secondary">Discuss a one-time website <span aria-hidden="true">↗</span></a>
+            <a href="contact.html" class="btn btn-secondary">Discuss a one-time website <span aria-hidden="true"><svg class="ws-icon ws-icon--arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a>
           </article>
           <article class="pricing-panel pricing-package pricing-package--monthly" aria-labelledby="monthly-heading">
             <div class="pricing-panel__top"><span class="pricing-panel__index">02 / MONTHLY</span><span class="pricing-panel__tag">HOSTING + UPDATES</span></div>
@@ -78,18 +81,20 @@
             <p class="pricing-package__subline">Website build included in the plan</p>
             <h4 class="pricing-package__list-label">PLAN FEATURES &amp; EXTRAS</h4>
             <ul class="pricing-package__features">
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Design And Development</li>
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Up To Five Website Pages</li>
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Additional fee: </span>$100 Fee Per Page After 5</li>
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Hosting Included</li>
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Support</li>
-                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Lifetime Edits</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Custom design and development</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Up to five website pages</li>
+                <li class="package-feature package-feature--excluded"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Additional fee: </span>$100 fee Per Page After 5</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Mobile-friendly layouts</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Contact form and click-to-call</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Search-friendly foundations</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Hosting included</li>
+                <li class="package-feature package-feature--included"><span class="package-feature__icon" aria-hidden="true"></span><span class="sr-only">Included: </span>Routine small edits included</li>
             </ul>
             <p class="pricing-package__note">Pages beyond the first five cost $100 each. The scope of included edits, cancellation, and ownership terms are agreed in writing before work begins.</p>
-            <a href="contact.html" class="btn btn-primary">Discuss a monthly website <span aria-hidden="true">↗</span></a>
+            <a href="contact.html" class="btn btn-primary">Discuss a monthly website <span aria-hidden="true"><svg class="ws-icon ws-icon--arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a>
           </article>
         </div>
-        <p class="pricing-note">Both packages include up to five pages. Each extra page is $100. For special features or an existing-site redesign, <a class="text-action" href="contact.html">ask for a scoped quote <span aria-hidden="true">↗</span></a>.</p>
+        <p class="pricing-note">Both packages include up to five pages. Each extra page is $100. For special features or an existing-site redesign, <a class="text-action" href="contact.html">ask for a scoped quote <span aria-hidden="true"><svg class="ws-icon ws-icon--arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a>.</p>
       </div>
     </section>
     <section class="sub-section sub-section--contrast" aria-labelledby="faq-heading">
@@ -101,11 +106,11 @@
           <details><summary>What counts as a small edit?</summary><p class="faq-answer">Examples include text changes, photo swaps, and business-hour updates. New features or major redesign work would be scoped separately.</p></details>
           <details><summary>How long does a project take?</summary><p class="faq-answer">Timing depends on scope, feedback, and content readiness. We’ll agree on a schedule before starting.</p></details>
           <details><summary>What if I already have a website?</summary><p class="faq-answer">Updating or replacing an existing site can fit either package. I'll review your current website and confirm what can be carried over before quoting the scope.</p></details>
-          <details><summary>Why choose a hand-coded website over a website builder or AI-generated site?</summary><p class="faq-answer">Website builders and AI tools can produce sites that feel generic, cluttered, or difficult to navigate. Hand-coded websites offer greater control over design, speed, and functionality. Every element is built with purpose, creating a clean, fast, and user-friendly experience that keeps the focus on your business.</p></details>
+          <details><summary>Why hand-coded instead of using a page builder?</summary><p class="faq-answer">For the types of sites I build, focused HTML, CSS, and JavaScript can offer control over design, performance, and maintenance without unnecessary dependencies.</p></details>
         </div>
       </div>
     </section>
-    <section class="sub-section sub-section--cta"><div class="container"><div class="cta-band"><div class="cta-band__eyebrow">HAVE SOMETHING IN MIND?</div><h2>Let's make your next website count.</h2><p>Tell me where you want to take your business online.</p><a class="btn btn-primary" href="contact.html">Get a free quote <span aria-hidden="true">↗</span></a></div></div></section>
+    <section class="sub-section sub-section--cta"><div class="container"><div class="cta-band"><div class="cta-band__eyebrow">HAVE SOMETHING IN MIND?</div><h2>Let's make your next website count.</h2><p>Tell me where you want to take your business online.</p><a class="btn btn-primary" href="contact.html">Get a free quote <span aria-hidden="true"><svg class="ws-icon ws-icon--arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a></div></div></section>
   </main>
   <footer class="site-footer">
     <div class="container">

@@ -14,13 +14,14 @@
       document.documentElement.setAttribute('data-theme', saved || 'dark');
     })();
   </script>
+  <link rel="stylesheet" href="icons.css">
 </head>
 <body class="site-subpage subpage--contact">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container">
       <a class="brand wolf-brand" href="index.html" aria-label="Wolf Spider Web Design — Home"><img class="wolf-logo-mark" src="assets/wolf-spider-avatar.webp" alt="" width="40" height="40" decoding="async"><span class="wolf-wordmark">Wolf Spider <span class="wolf-pipe" aria-hidden="true">|</span> <span class="wolf-descriptor">Web Design</span></span></a>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false"><svg class="ws-icon ws-icon--menu" data-icon="menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="ws-icon ws-icon--close" data-icon="close" hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
       <nav class="nav" id="primary-navigation" aria-label="Main navigation">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="services.html">Services</a>
@@ -28,7 +29,7 @@
         <a class="nav-link" href="pricing.html">Pricing</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link active" href="contact.html" aria-current="page">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme"><svg class="ws-icon ws-icon--sun" data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="ws-icon ws-icon--moon" data-icon="moon" hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 13.1A9 9 0 0 1 10.9 3.2a9 9 0 1 0 9.9 9.9Z"/></svg></button>
         <a class="btn btn-primary" href="contact.html">Get a quote</a>
       </nav>
     </div>

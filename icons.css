@@ -1,0 +1,56 @@
+/* Wolf Spider — consistent vector icons across mobile and desktop.
+   Keep this file after styles.css and work-additions.css.
+   No icon font, emoji glyphs, JavaScript library, or build step. */
+.ws-icon {
+  width: 1.15em;
+  height: 1.15em;
+  display: inline-block;
+  vertical-align: -0.17em;
+  flex: 0 0 auto;
+  color: inherit;
+  overflow: visible;
+}
+.nav-toggle .ws-icon, .theme-toggle .ws-icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+.nav-toggle .ws-icon[hidden], .theme-toggle .ws-icon[hidden] { display: none !important; }
+/* Make decorative icon sizing consistent with the established Wolf Spider design. */
+.capability-symbol .ws-icon { width: 28px; height: 28px; vertical-align: middle; }
+.capability-arrow .ws-icon { width: 19px; height: 19px; display: block; }
+.service-icon .ws-icon { width: 23px; height: 23px; }
+.owner-image-caption .ws-icon { width: 14px; height: 14px; color: #ffadb5; }
+.service-card-link__action .ws-icon { width: 16px; height: 16px; }
+.site-subpage .text-action .ws-icon { width: 17px; height: 17px; transition: transform .2s ease; }
+.site-subpage .text-action:hover .ws-icon { transform: translate(2px,-2px); }
+/* Replace device-dependent Unicode check marks and arrows inside CSS pseudo-elements. */
+.card ul li::before {
+  content: "";
+  width: .48rem; height: .75rem;
+  left: .35rem; top: .72rem;
+  border: solid var(--accent);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.site-subpage .package-feature--included .package-feature__icon::before {
+  content: "";
+  display: block;
+  width: 6px; height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-1px) rotate(45deg);
+}
+.site-subpage .editorial-list li::before {
+  content: "";
+  display: inline-block;
+  width: 16px; height: 16px;
+  margin-right: .65rem;
+  vertical-align: -3px;
+  background-color: var(--text);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M4%2012h16m-7-7%207%207-7%207%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M4%2012h16m-7-7%207%207-7%207%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-subpage .text-action .ws-icon { transition: none; }
+}

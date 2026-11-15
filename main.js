@@ -17,8 +17,11 @@
   function paintToggle() {
     if (!toggle) return;
     var isDark = currentTheme() === 'dark';
-    // Sun in dark mode (click to go light), moon in light mode
-    toggle.textContent = isDark ? '☀' : '☾';
+    // SVG controls render identically on desktop and mobile; no emoji glyphs.
+    var sun = toggle.querySelector('[data-icon="sun"]');
+    var moon = toggle.querySelector('[data-icon="moon"]');
+    if (sun) sun.hidden = !isDark;
+    if (moon) moon.hidden = isDark;
     toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   }
 
@@ -36,12 +39,21 @@
   var navToggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.nav');
 
+  function paintNavIcon(open) {
+    if (!navToggle) return;
+    var bars = navToggle.querySelector('[data-icon="menu"]');
+    var close = navToggle.querySelector('[data-icon="close"]');
+    if (bars) bars.hidden = open;
+    if (close) close.hidden = !open;
+  }
+
   if (navToggle && nav) {
+    paintNavIcon(nav.classList.contains('open'));
     navToggle.addEventListener('click', function () {
       var open = nav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      navToggle.textContent = open ? '✕' : '☰';
+      paintNavIcon(open);
     });
 
     // Close the menu when a link is tapped
@@ -50,7 +62,7 @@
         nav.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
         navToggle.setAttribute('aria-label', 'Open menu');
-        navToggle.textContent = '☰';
+        paintNavIcon(false);
       }
     });
   }
@@ -72,21 +84,4 @@
   document.querySelectorAll('.footer-bottom span:first-child').forEach(function (el) {
     el.textContent = el.textContent.replace(/\u00a9 \d{4}/, '© ' + year);
   });
-})();
-
-/* Progressive enhancement: subtle section entrances, no dependencies. */
-(function () {
-  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var targets = document.querySelectorAll('.section-head, .service-grid .card, .founder-card, .steps .step');
-  if (!targets.length) return;
-  targets.forEach(function (el) { el.classList.add('reveal'); });
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px 40px 0px' });
-  targets.forEach(function (el) { observer.observe(el); });
-  document.documentElement.classList.add('js-motion');
 })();
