@@ -17,11 +17,11 @@
   function paintToggle() {
     if (!toggle) return;
     var isDark = currentTheme() === 'dark';
-    // SVG controls render identically on desktop and mobile; no emoji glyphs.
+    // Show a moon in dark mode and a sun in light mode (identical on mobile and desktop).
     var sun = toggle.querySelector('[data-icon="sun"]');
     var moon = toggle.querySelector('[data-icon="moon"]');
-    if (sun) sun.hidden = !isDark;
-    if (moon) moon.hidden = isDark;
+    if (sun) sun.hidden = isDark;
+    if (moon) moon.hidden = !isDark;
     toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   }
 
